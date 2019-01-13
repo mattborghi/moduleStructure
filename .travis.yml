@@ -1,13 +1,14 @@
 language: python
 python:
-- '3.6'
+    - '3.6'
 script:
-- python3 TestProject/tests/first_test.py
-- python3 -m unittest TestProject.tests.test_sum
+    - python3 TestProject/tests/first_test.py
+    - python3 -m unittest TestProject.tests.test_sum
 notifications:
   email: false
   slack:
-    secure: K/jmyKYhtubeyD44poLjlfe58l7Gm7pPINVcRbxB2Z7bXpRV6/0qDCeYWFGvKWK7yvWqSDQP2/DdwYfID4gdEmm4Co+1+vCjFPXeHE+iZHyZ8sUKJlVFOa64YH5NkmN294n0Qfya6N7gGrLD+ydvIbClIoKh7hYymz9FfJRHwPk4qxwlrPzHtclmAgLzVxBuGcg23//Z5Q9jwt8U1ydV7hspon7MuN7yxgCN+aVkvfTMYklv2qH5uarPnYQEYNfYGbEgw18V7rLHBu7sX9Zxk+5bwnUV+oaZtQc/IQEhzLyTbRxQ27qSKkSq0mi4hd/7RcH9uGq/Y3JEymeKYF2+k0PqwPJ1aiP9MrSnb8yqcb3YocWC5pdzVFtcWoVGqMJgVcw6YShj4Abxv+LK3um2Bkl6suR6CsmvVOh5VmVGx0Jus2Xwfo1xMvSLYVs3+qZ5irw3xjyzJCggZ54JKXI6eMzXnSB3lmgnpPZoZoDlXD2RxTrhMEbblRfco72erQqC/9RcF+VZSjZkL3R/uUSyowgtexmjZ2FyC/rms+l6ZwkLrmP/D/UYYZmSvZW7WimfsGgb7LGDPG9Gv1uQaf59iUqCUDlJMt/tNI1ejppOdcDkaBxe6j3852YW8BeQdLJlWscaam72WHPlj+QHlBGg2bvL7MJGg2N2LlOuZITJykI=
+    rooms:
+        - secure: K/jmyKYhtubeyD44poLjlfe58l7Gm7pPINVcRbxB2Z7bXpRV6/0qDCeYWFGvKWK7yvWqSDQP2/DdwYfID4gdEmm4Co+1+vCjFPXeHE+iZHyZ8sUKJlVFOa64YH5NkmN294n0Qfya6N7gGrLD+ydvIbClIoKh7hYymz9FfJRHwPk4qxwlrPzHtclmAgLzVxBuGcg23//Z5Q9jwt8U1ydV7hspon7MuN7yxgCN+aVkvfTMYklv2qH5uarPnYQEYNfYGbEgw18V7rLHBu7sX9Zxk+5bwnUV+oaZtQc/IQEhzLyTbRxQ27qSKkSq0mi4hd/7RcH9uGq/Y3JEymeKYF2+k0PqwPJ1aiP9MrSnb8yqcb3YocWC5pdzVFtcWoVGqMJgVcw6YShj4Abxv+LK3um2Bkl6suR6CsmvVOh5VmVGx0Jus2Xwfo1xMvSLYVs3+qZ5irw3xjyzJCggZ54JKXI6eMzXnSB3lmgnpPZoZoDlXD2RxTrhMEbblRfco72erQqC/9RcF+VZSjZkL3R/uUSyowgtexmjZ2FyC/rms+l6ZwkLrmP/D/UYYZmSvZW7WimfsGgb7LGDPG9Gv1uQaf59iUqCUDlJMt/tNI1ejppOdcDkaBxe6j3852YW8BeQdLJlWscaam72WHPlj+QHlBGg2bvL7MJGg2N2LlOuZITJykI=
     on_success: always  # change: send a notification when the build status changes.
     on_failure: always  # always: always send a notification.
     template:
