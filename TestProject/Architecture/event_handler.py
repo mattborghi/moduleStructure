@@ -1,3 +1,4 @@
 from TestProject.Architecture.engine import hello
 
-hello()
+def calling_hello():
+    hello()
