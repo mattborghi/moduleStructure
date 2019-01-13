@@ -2,4 +2,5 @@
   python:
     - "3.6"
   script:
-    - python TestProject/tests/first_test.py
+    - python3 TestProject/tests/first_test.py
+    - python3 -m unittest TestProject.tests.test_sum

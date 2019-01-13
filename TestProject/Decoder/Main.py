@@ -15,6 +15,11 @@ class MyClass():
 		print("Hello Class created!")
 		selectName.call_architecture()
 
+class Suma():
+
+	def sumando(self,a,b):
+		return a+b
+
 # Method 2:
 # from TestProject.Decoder.selectName import *
 # and call the method as call_architecture(),
