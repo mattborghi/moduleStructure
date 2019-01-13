@@ -2,4 +2,4 @@
   python:
     - "3.6"
   script:
-    - unittest
+    - python TestProject/tests/first_test.py
