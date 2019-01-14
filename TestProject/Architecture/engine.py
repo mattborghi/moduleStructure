@@ -1,2 +1,3 @@
-def hello():
-	print("hello from architecture")
+class Engine():
+    def hello(self):
+        print("hello from architecture")

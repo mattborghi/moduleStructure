@@ -1,4 +1,5 @@
-from TestProject.Architecture.engine import hello
+from TestProject.Architecture.engine import Engine
 
 def calling_hello():
-    hello()
+    a = Engine()
+    a.hello()

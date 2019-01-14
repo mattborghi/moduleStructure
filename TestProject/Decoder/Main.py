@@ -11,6 +11,21 @@ if __name__ == '__main__':
 
 
 class MyClass():
+	"""
+	A class documentation example
+
+	...
+
+	Attributes
+	----------
+	None : None
+		this is an example
+
+	Methods
+	-------
+	__init__()
+		Runs some code at initialization
+	"""
 	def __init__(self):
 		print("Hello Class created!")
 		selectName.call_architecture()
@@ -18,6 +33,14 @@ class MyClass():
 class Suma():
 
 	def sumando(self,a,b):
+		"""
+		Parameters
+		----------
+		a : float
+			one number
+		b : float
+			another number
+		"""
 		return a+b
 
 # Method 2:
