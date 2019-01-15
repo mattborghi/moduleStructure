@@ -1,0 +1,14 @@
+site_name: UniversalMC
+docs_dir: sources
+repo_url: http://github.com/mattborghi/TestProject
+site_description: 'Documentation for TestProject, the Python Deep Learning library.'
+
+theme:
+  name: readthedocs
+  favicon:  './img/favicon.ico'
+
+nav:
+- Home: index.md
+- Why use Keras:  Architecture/engine.md
+- Getting started:
+  - Guide to the Sequential model: Decoder/Main.md
