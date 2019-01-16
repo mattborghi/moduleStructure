@@ -27,26 +27,26 @@ EXCLUDE = {
 
 PAGES = [
     {
-        'page': 'Decoder/Main.md',
+        'page': 'Decoder\Main.md',
         'classes': [
             Decoder.MyClass,
             Decoder.Suma
         ]
     },
     {
-        'page': 'Decoder/selectName.md',
+        'page': 'Decoder\selectName.md',
         'functions': [
             Decoder.selectName.call_architecture
         ]
     },
     {
-        'page': 'Architecture/engine.md',
+        'page': 'Architecture\engine.md',
         'classes': [
             Architecture.Engine
         ]
     },
     {
-        'page': 'Architecture/event_handler.md',
+        'page': 'Architecture\event_handler.md',
         'functions': [
             Architecture.event_handler.calling_hello
         ]
