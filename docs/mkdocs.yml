@@ -1,12 +1,41 @@
 site_name: UniversalMC
+site_description: 'Just a testing project we are working with'
+site_author: Matias Borghi
 docs_dir: sources
-repo_url: http://github.com/mattborghi/moduleStructure
-site_description: 'Documentation for TestProject, the Python Deep Learning library.'
-site_favicon:  'img/ai.ico'
 
+# Repository
+repo_url: http://github.com/mattborghi/moduleStructure #repo_url: http://github.com/ramiromosteirin/UniversalMC
+repo_name: mattborghi/moduleStructure
+
+# Configuration
 theme:
-  name: readthedocs
+  name: 'material'
+  logo:
+    icon: 'all_inclusive' # functions, all_inclusive, more at: https://material.io/tools/icons/?style=baseline
+#  logo: 'img/umc.jpg'
+  palette:
+    primary: 'teal'
+    accent: 'light_blue'
+  font:
+    text: 'Slabo 27px' # Roboto, Slabo 27px, Noto Serif, Quicksand, Crimson Text, more at: https://fonts.google.com/
+    code: 'Roboto Mono'
+  language: 'en'
+  direction: 'ltr' # text direction: rtl, ltr
+  feature:
+    tabs: true
+#  favicon: 'img/ai.ico'
 
+# Extensions
+markdown_extensions:
+  - admonition # add block-styled side content
+  - codehilite:
+      linenums: true
+  - footnotes
+  - pymdownx.arithmatex
+
+extra_javascript:
+  - 'javascripts/extra.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
 nav:
 - Home: index.md

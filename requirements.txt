@@ -1,2 +1,4 @@
 sphinx
 mkdocs
+mkdocs-material
+pygments
