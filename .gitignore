@@ -1,3 +1,6 @@
 *__pycache__*
 .idea/
-*.pyc"site/" 
+*.pyc
+docs/site/
+docs/sources/
+
