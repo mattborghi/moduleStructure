@@ -2,13 +2,13 @@
 """Core TestProject file for decoding.
 """
 # Method 1:
-from TestProject.Decoder import selectName
+from TestProject.Decoder.selectName import selection
 
-if __name__ == '__main__':
-	print("Hello Main!")
+if __name__ == "__main__":
+    print("Hello Main!")
 
 
-class MyClass():
+class MyClass:
     """
     Masks a sequence by using a mask value to skip timesteps.
     If all features for a given sample timestep are equal to `mask_value`,
@@ -29,11 +29,13 @@ class MyClass():
         model.add(LSTM(32))
     ```
     """
+
     def __init__(self):
         print("Hello Class created!")
-        selectName.call_architecture()
+        selection.call_architecture()
 
-class Suma():
+
+class Suma:
     """Applies Dropout to the input.
     Dropout consists in randomly setting
     a fraction `rate` of input units to 0 at each update during training time,
@@ -51,8 +53,10 @@ class Suma():
         - [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](
            http://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf)
     """
-    def sumando(self,a,b):
-        return a+b
+
+    def sumando(self, a, b):
+        return a + b
+
 
 # Method 2:
 # from TestProject.Decoder.selectName import *

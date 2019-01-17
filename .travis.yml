@@ -1,9 +1,17 @@
 language: python
 python:
   - '3.6'
+install:
+  - pip install -r requirements.txt
 script:
-  - python3 TestProject/tests/first_test.py
-  - python3 -m unittest TestProject.tests.test_sum
+  - flake8 # Check for inconsistencies before running black
+  - pylint
+  - pyflakes
+  - pydocstyle
+  - black . # Run black on all python subdirectories
+  - python -m unittest discover
+#  - python3 TestProject/tests/first_test.py
+#  - python3 -m unittest TestProject.tests.test_sum
 notifications:
   email: false
   slack:

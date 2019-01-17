@@ -50,6 +50,13 @@ PAGES = [
         'functions': [
             Architecture.event_handler.calling_hello
         ]
+    },
+    {
+        'page': 'Decoder\meth_main.md',
+        'methods': [
+            Decoder.MyClass,
+            Decoder.Suma
+        ]
     }
 ]
 
