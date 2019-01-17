@@ -1,4 +1,4 @@
-class Engine():
+class Engine:
     """ Spatial 1D version of Dropout.
     This version performs the same function as Dropout, however it drops
     entire 1D feature maps instead of individual elements. If adjacent frames
@@ -18,5 +18,6 @@ class Engine():
         - [Efficient Object Localization Using Convolutional Networks](
            https://arxiv.org/abs/1411.4280)
         """
+
     def hello(self):
         print("hello from architecture")
