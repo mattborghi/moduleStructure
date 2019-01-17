@@ -3,7 +3,6 @@ from TestProject.Decoder.Main import Suma
 
 # for testing sublime command
 class TestSum(unittest.TestCase):
-
     def setUp(self):
         print("setUp")
         self.a = Suma()
@@ -16,6 +15,6 @@ class TestSum(unittest.TestCase):
         self.assertEqual(res, 5, "new hello world")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
     print("It worked")

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''
+"""
 General documentation architecture:
 Home
 Index
@@ -8,14 +8,12 @@ Index
     FAQ
 - Models
 Utils
-'''
+"""
 
 from TestProject import Architecture
 from TestProject import Decoder
 
-EXCLUDE = {
-    'tests'
-}
+EXCLUDE = {"tests"}
 
 # For each class to document, it is possible to:
 # 1) Document only the class: [classA, classB, ...]
@@ -26,42 +24,21 @@ EXCLUDE = {
 # [classA, (classB, [module.classB.method1, module.classB.method2, ...]), ...]
 
 PAGES = [
+    {"page": "Decoder\Main.md", "classes": [Decoder.MyClass, Decoder.Suma]},
     {
-        'page': 'Decoder\Main.md',
-        'classes': [
-            Decoder.MyClass,
-            Decoder.Suma
-        ]
+        "page": "Decoder\selectName.md",
+        "functions": [Decoder.selectName.selection.call_architecture],
     },
+    {"page": "Architecture\engine.md", "classes": [Architecture.Engine]},
     {
-        'page': 'Decoder\selectName.md',
-        'functions': [
-            Decoder.selectName.call_architecture
-        ]
+        "page": "Architecture\event_handler.md",
+        "functions": [Architecture.event_handler.calling_hello],
     },
-    {
-        'page': 'Architecture\engine.md',
-        'classes': [
-            Architecture.Engine
-        ]
-    },
-    {
-        'page': 'Architecture\event_handler.md',
-        'functions': [
-            Architecture.event_handler.calling_hello
-        ]
-    },
-    {
-        'page': 'Decoder\meth_main.md',
-        'methods': [
-            Decoder.MyClass,
-            Decoder.Suma
-        ]
-    }
+    {"page": "Decoder\meth_main.md", "methods": [Decoder.MyClass, Decoder.Suma]},
 ]
 
 
-ROOT = ''
+ROOT = ""
 
 template_np_implementation = """# Numpy implementation
     ```python

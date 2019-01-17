@@ -2,7 +2,6 @@ import unittest
 
 # for testing sublime command
 class TestHelloWorld(unittest.TestCase):
-
     def setUp(self):
         print("setUp")
 
@@ -19,5 +18,5 @@ class TestHelloWorld(unittest.TestCase):
 #         x = helloworld.foo(1)
 #         self.assertEqual(x, 2)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
