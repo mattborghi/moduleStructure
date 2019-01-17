@@ -9,9 +9,9 @@ script:
 #  - pyflakes
 #  - pydocstyle
 #  - black . # Run black on all python subdirectories
-  - python -m unittest discover
-#  - python3 TestProject/tests/first_test.py
-#  - python3 -m unittest TestProject.tests.test_sum
+#  - python -m unittest discover # just for test_*.py files
+  - python3 TestProject/tests/first_test.py
+  - python3 -m unittest TestProject.tests.test_sum
 notifications:
   email: false
   slack:
