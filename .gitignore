@@ -3,4 +3,4 @@
 *.pyc
 docs/site/
 docs/sources/
-
+*.bat
