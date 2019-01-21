@@ -43,6 +43,7 @@ nav:
 - Getting started:
   - Decoder: Decoder/Main.md
   - Decoder other: Decoder/selectName.md
+  - Dummy Sphinx: Decoder/dummy.md
   - Architecture: Architecture/engine.md
   - Architecture other: Architecture/event_handler.md
 - Testing methods:

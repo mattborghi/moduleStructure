@@ -29,6 +29,7 @@ PAGES = [
         "page": "Decoder\selectName.md",
         "functions": [Decoder.selectName.selection.call_architecture],
     },
+    {"page": "Decoder\dummy.md", "methods": [Decoder.Prueba.MyFunction]},
     {"page": "Architecture\engine.md", "classes": [Architecture.Engine]},
     {
         "page": "Architecture\event_handler.md",
