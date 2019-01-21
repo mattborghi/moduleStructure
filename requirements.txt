@@ -7,3 +7,4 @@ black
 pylint
 pyflakes
 pydocstyle
+pylama

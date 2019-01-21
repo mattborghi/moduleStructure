@@ -13,30 +13,69 @@ By default it will be ".style".
     - pylint
     - pyflakes
     - pydocstyle
+    - pylama
 
 Example
 -------
 1. $ python linter.py: will not run anything.
-2. $ python linter.py --flake8 ".style": run flake8 and store the ouput in the .style folder.
+2. $ python linter.py --flake8 dir=.style : run flake8 and store the output in the ".style" folder.
 """
 import sys
 import os
 from termcolor import colored
 
 
+class Generators:
+    # noinspection PyMethodMayBeStatic
+    def generate_filenames(self, location):
+        """
+        generates a sequence of opened files
+        matching a specific extension
+        """
+        for dir_path, dir_names, file_names in os.walk(location):
+            for file_name in file_names:
+                if file_name.endswith('.txt'):
+                    yield open(os.path.join(dir_path, file_name))
+
+    # noinspection PyMethodMayBeStatic
+    def cat_files(self, files):
+        """
+        takes in an iterable of filenames
+        """
+        for fname in files:
+            for line in fname:
+                yield line
+
+    # noinspection PyMethodMayBeStatic
+    def grep_files(self, lines):
+        """
+        takes in an iterable of lines
+        """
+        for line in lines:
+            yield line
+
+    def __init__(self, location):
+        py_files = self.generate_filenames(location)
+        py_file = self.cat_files(py_files)
+        lines = self.grep_files(py_file)
+        for line in lines:
+            print(line)
+
+
 class Syntax:
-    def display_files(self, dir_location, decision_dict):
+    # noinspection PyMethodMayBeStatic
+    def display_files(self, folder_location, decision_dict):
         """
         Function that displays the files in dir_location
-        :param dir_location: directory where files are stored
-        :type dir_location: string
+        :param folder_location: directory where files are stored
+        :type folder_location: string
         :param decision_dict: dictionary with id as keys and files as values
         :type decision_dict: dictionary
         :return: decision_dict
         :rtype: dictionary
         """
         index = 1
-        for root, dirs, files in os.walk(dir_location):
+        for root, dirs, files in os.walk(folder_location):
             for filename in files:
                 decision_dict[str(index)] = filename
                 print("\n" + str(index) + ". " + filename)
@@ -45,16 +84,17 @@ class Syntax:
         print("\n" + str(index) + ". " + "EXIT")
         return decision_dict
 
-    def generateORload(self, dir_location):
+    # noinspection PyMethodMayBeStatic
+    def generateorload(self, folder_location):
         """
         Function that displays the chosen files in dir_location
-        :param dir_location: directory where the files are stored
-        :type dir_location: string
+        :param folder_location: directory where the files are stored
+        :type folder_location: string
         """
         while True:
             decision_dict = {}
             print(colored("\nWhich files do you want to inspect: \n", "green"))
-            decision_dict = self.display_files(dir_location, decision_dict)
+            decision_dict = self.display_files(folder_location, decision_dict)
             # print(decision_dict)
             decision = input("\nSelect option: ")
             try:
@@ -74,7 +114,7 @@ class Syntax:
             else:
                 # Load file and output
                 print("Chosen file is: " + decision)
-                with open(dir_location + "/" + decision) as f:
+                with open(folder_location + "/" + decision) as f:
                     for line in f:
                         print(line.strip())
 
@@ -119,6 +159,8 @@ if __name__ == "__main__":
             to_run.append("pylint TestProject >> " + dir_location + "/pylint.txt")
         elif elem == "pyflakes":
             to_run.append("pyflakes TestProject >> " + dir_location + "/pyflakes.txt")
+        elif elem == "pylama":
+            to_run.append("pylama TestProject >> " + dir_location + "/pylama.txt")
         elif elem == "pydocstyle":
             to_run.append("pydocstyle . >> " + dir_location + "/pydocstyle.txt")
         else:
@@ -132,7 +174,9 @@ if __name__ == "__main__":
         os.system(elem)
     # Which ones do you want to see? Do this until we want to exit
     a = Syntax()
-    a.generateORload(dir_location)
+    a.generateorload(dir_location)
+    # Display files in folder using python generators
+    # Generators(dir_location)
     # Delete the new created folder
     print("Removing folder " + dir_location)
     os.system("rmdir /S /Q " + dir_location)
