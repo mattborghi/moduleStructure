@@ -26,6 +26,15 @@ from termcolor import colored
 
 class Syntax:
     def display_files(self, dir_location, decision_dict):
+        """
+        Function that displays the files in dir_location
+        :param dir_location: directory where files are stored
+        :type dir_location: string
+        :param decision_dict: dictionary with id as keys and files as values
+        :type decision_dict: dictionary
+        :return: decision_dict
+        :rtype: dictionary
+        """
         index = 1
         for root, dirs, files in os.walk(dir_location):
             for filename in files:
@@ -37,6 +46,11 @@ class Syntax:
         return decision_dict
 
     def generateORload(self, dir_location):
+        """
+        Function that displays the chosen files in dir_location
+        :param dir_location: directory where the files are stored
+        :type dir_location: string
+        """
         while True:
             decision_dict = {}
             print(colored("\nWhich files do you want to inspect: \n", "green"))
