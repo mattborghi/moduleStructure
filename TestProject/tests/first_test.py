@@ -3,7 +3,7 @@ import unittest
 # for testing sublime command
 class TestHelloWorld(unittest.TestCase):
     def setUp(self):
-        print("setUp")
+        print("setUp first sum")
 
     def tearDown(self):
         print("tearDown")

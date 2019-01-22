@@ -4,7 +4,7 @@ from TestProject.Decoder.Main import Suma
 # for testing sublime command
 class TestSum(unittest.TestCase):
     def setUp(self):
-        print("setUp")
+        print("setUp suma")
         self.a = Suma()
 
     def tearDown(self):
