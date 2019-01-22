@@ -4,7 +4,7 @@ python:
   - '3.6'
 install:
   - pip install tox-travis
-#  - pip install -r requirements.txt
+  - pip install -r requirements.txt
 
 script:
 #  - flake8 # Check for inconsistencies before running black
@@ -16,6 +16,10 @@ script:
 #  - python3 TestProject/tests/first_test.py
 #  - python3 -m unittest TestProject.tests.test_sum
   - tox
+  - coverage run TestProject/tests/first_test.py
+  - coverage run -m unittest TestProject.tests.test_sum
+  - coverage report -m
+
 notifications:
   email: false
   slack:
