@@ -9,3 +9,4 @@ pyflakes
 pydocstyle
 pylama
 tox
+python-coveralls
