@@ -1,9 +1,10 @@
-import setuptools
+from setuptools import setup
+from setuptools import find_packages
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setuptools.setup(
+setup(
     name="TestProject",
     version="0.0.1",
     author="Matias Borghi",
@@ -12,7 +13,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/mattborghi/moduleStructure",
-    packages=setuptools.find_packages(),
+    license='MIT',
+    packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
