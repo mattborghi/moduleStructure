@@ -1,0 +1,6 @@
+*__pycache__*
+.idea/
+*.pyc
+docs/site/
+docs/sources/
+*.bat

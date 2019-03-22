@@ -1,0 +1,12 @@
+sphinx
+mkdocs
+mkdocs-material
+pygments
+flake8
+black
+pylint
+pyflakes
+pydocstyle
+pylama
+tox
+python-coveralls
